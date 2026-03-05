@@ -1,23 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ============================================================
+   DESIGN TOKENS — change anything here, it cascades everywhere
+   ============================================================ */
+:root {
+  /* Colors */
+  --color-body-bg:      #0d0d0d;        /* ← body background — edit here */
+  --color-text:         rgba(0, 0, 0);
+  --color-white:        #ffffff;
+  --color-grey:         rgb(182, 182, 182);
+  --color-overlay:      rgba(0, 0, 0, 0.4);
+  --color-card-bg:      #ffffff;
+
+  /* Typography */
+  --font-primary:       "Syne", helvetica, sans-serif;
+  --font-size-nav:      1.05rem;
+  --font-size-hero-p:   1.125rem;
+
+  /* Spacing */
+  --spacing-nav-pad:    1rem;
+  --spacing-section:    2rem;
+  --spacing-card-pad:   1rem;
+  --spacing-hero-pad-x: 5vw;
+
+  /* Nav */
+  --nav-gap:            2rem;
+  --nav-blur:           100px;
+  --nav-bg:             transparent;          /* e.g. rgba(255,255,255,0.1) */
+  --nav-border:         none;                 /* e.g. 1px solid rgba(255,255,255,0.3) */
+
+  /* Buttons / Borders */
+  --btn-pad:            0.75rem 1.5rem;
+  --btn-radius:         0;
+  --contact-radius:     20px;
+
+  /* Hero */
+  --hero-height:        100vh;
+
+  /* Card */
+  --card-radius:        20px;
+
+  /* Transitions */
+  --transition-fast:    0.2s ease;
+  --transition-med:     0.4s ease;
 }
 
-:root{
-  --text-color: rgba(0, 0, 0);
-  --grey: rgb(182, 182, 182);
-  --white: white;
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
+/* ============================================================
+   BASE
+   ============================================================ */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-body-bg);  /* ← driven by token above */
+  color: var(--color-text);
+}
+
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .hero {
   position: relative;
-  height: 100vh;
+  height: var(--hero-height);
   overflow: hidden;
 }
 
-body{
-    font-family: "Syne", helvetica, sans-serif;
+/* --- background video --- */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-bg video {
@@ -26,21 +86,23 @@ body{
   object-fit: cover;
 }
 
+/* --- dark overlay --- */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--color-overlay);
   z-index: 2;
 }
 
+/* --- text content --- */
 .hero-content {
   position: absolute;
   z-index: 3;
   max-width: 600px;
-  padding: 0 5vw;
+  padding: 0 var(--spacing-hero-pad-x);
   top: 50%;
   transform: translateY(-50%);
-  color: var(--white);
+  color: var(--color-white);
 }
 
 .hero-content h1 {
@@ -50,26 +112,32 @@ body{
 }
 
 .hero-content p {
-  font-size: 1.125rem;
+  font-size: var(--font-size-hero-p);
   max-width: 40ch;
   margin-bottom: 2rem;
 }
 
+/* --- CTA button --- */
 .hero-btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid var(--white);
+  padding: var(--btn-pad);
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--color-white);
   text-decoration: none;
-  color: var(--white);
-  transition: transform 0.4s ease, background 0.4s ease;
+  color: var(--color-white);
+  transition: transform var(--transition-med), background var(--transition-med);
 }
 
 .hero-btn:hover {
   transform: translateY(-3px);
-  background: var(--white);
-  color: var(--text-color);
+  background: var(--color-white);
+  color: var(--color-text);
 }
 
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
 .site-header {
   position: fixed;
   top: 0;
@@ -78,74 +146,82 @@ body{
   z-index: 1000;
 }
 
-.nav-links{
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+nav {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-nav-pad);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(var(--nav-blur));
+  border-bottom: var(--nav-border);
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-nav{
-    display: flex;
-    width: 100%;
-    padding: 1rem;
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    backdrop-filter: blur(100px);
-    /* border-bottom: 1px solid  rgba(255, 255, 255, 0.3) ; */
-    margin-bottom: 2rem;
-    align-items: center;
-    justify-content: space-between;
+/* --- logo --- */
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-white);
 }
 
-.logo{
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--white);
-    
+.logo p {
+  transform: translateY(-3px);
 }
 
-.logo p{
-    transform: translateY(-3px);
+/* --- nav links --- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--nav-gap);
+  justify-content: center;
+  align-items: center;
 }
 
-.nav-links li a, .contact a{
-    position: relative;
-    font-size: 1.05rem;
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--white);
-    transition: 0.2s ease;
+.nav-links li a,
+.contact a {
+  position: relative;
+  font-size: var(--font-size-nav);
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-white);
+  transition: color var(--transition-fast);
 }
 
-.nav-links li a:hover{
-    color: var(--grey);
+.nav-links li a:hover {
+  color: var(--color-grey);
 }
 
-.contact{
+/* --- contact pill --- */
+.contact {
   padding: 5px 10px;
-  background-color: none;
-  border: 1px solid var(--white);
-  border-radius: 20px;
-}
-.contact a{
-  color: var(--white);
+  border: 1px solid var(--color-white);
+  border-radius: var(--contact-radius);
+  transition: background var(--transition-fast);
 }
 
-.contact:hover{
-  background-color: var(--white);
+.contact a {
+  color: var(--color-white);
 }
 
-.contact:hover a{
-  color: var(--text-color);
+.contact:hover {
+  background-color: var(--color-white);
 }
 
-.section{
-  padding: 2rem;
+.contact:hover a {
+  color: var(--color-text);
 }
 
-.main-div{
-  border-radius: 20px;
-  padding: 1rem;
+
+/* ============================================================
+   CONTENT SECTIONS
+   ============================================================ */
+.section {
+  padding: var(--spacing-section);
+}
+
+.main-div {
+  border-radius: var(--card-radius);
+  padding: var(--spacing-card-pad);
+  background-color: var(--color-card-bg);
 }

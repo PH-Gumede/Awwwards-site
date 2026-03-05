@@ -240,4 +240,10 @@ nav {
   height: 100vh;
   display: flex;
   align-items: center;
+  color: var(--color-white);
+}
+
+.about-us{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
 }

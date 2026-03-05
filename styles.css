@@ -122,7 +122,10 @@ nav{
 }
 
 .contact{
-    background-color:rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  color:rgba(0, 0, 0, 0.4);
+  background-color: white;
+  border-radius: 20px;
 }
 
 .section{

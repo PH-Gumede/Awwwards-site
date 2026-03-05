@@ -3,12 +3,13 @@
    ============================================================ */
 :root {
   /* Colors */
-  --color-body-bg:      #0d0d0d;        /* ← body background — edit here */
-  --color-text:         rgba(0, 0, 0);
+  --color-body-bg:      rgb(0, 102, 41);        /* ← body background — edit here */
+  --color-text:         rgb(0, 102, 41);
   --color-white:        #ffffff;
   --color-grey:         rgb(182, 182, 182);
   --color-overlay:      rgba(0, 0, 0, 0.4);
-  --color-card-bg:      #ffffff;
+  --color-card-bg:      rgb(217, 228, 201);
+  --color-nav:          rgb(236, 241, 228);
 
   /* Typography */
   --font-primary:       "Syne", helvetica, sans-serif;
@@ -17,7 +18,7 @@
 
   /* Spacing */
   --spacing-nav-pad:    1rem;
-  --spacing-section:    2rem;
+  --spacing-section:    0.25rem;
   --spacing-card-pad:   1rem;
   --spacing-hero-pad-x: 5vw;
 
@@ -36,7 +37,7 @@
   --hero-height:        100vh;
 
   /* Card */
-  --card-radius:        20px;
+  --card-radius:        10px;
 
   /* Transitions */
   --transition-fast:    0.2s ease;

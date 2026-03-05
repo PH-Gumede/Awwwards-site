@@ -17,7 +17,7 @@
 }
 
 body{
-    font-family: "Syne", sans-serif;
+    font-family: "Syne", helvetica, sans-serif;
 }
 
 .hero-bg video {
@@ -124,11 +124,20 @@ nav{
 }
 
 .contact{
-  padding: 5px;
-  background-color: var(--white);
+  padding: 5px 10px;
+  background-color: none;
+  border: 1px solid var(--white);
   border-radius: 20px;
 }
 .contact a{
+  color: var(--white);
+}
+
+.contact:hover{
+  background-color: var(--white);
+}
+
+.contact:hover a{
   color: var(--text-color);
 }
 

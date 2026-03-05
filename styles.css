@@ -246,8 +246,19 @@ nav {
 .about-us{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
+  gap: 4rem;
+  height: max(100vh);
 }
 
+.about3{
+  border-radius: var(--card-radius);
+  height: 100%;
+  overflow: hidden;
+}
+.about3 img{
+  object-fit: cover;
+  object-position: center;
+}
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

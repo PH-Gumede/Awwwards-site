@@ -128,7 +128,7 @@ nav{
   background-color: var(--white);
   border-radius: 20px;
 }
-.contact li a{
+.contact a{
   color: var(--text-color);
 }
 

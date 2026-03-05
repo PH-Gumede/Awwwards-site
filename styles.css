@@ -225,3 +225,7 @@ nav {
   padding: var(--spacing-card-pad);
   background-color: var(--color-card-bg);
 }
+
+.bg-transparent{
+  background-color: transparent;
+}

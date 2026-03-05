@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root{
+  --main-b: rgba(0, 0, 0, 0.4);
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -34,7 +38,7 @@ body{
   padding: 0 5vw;
   top: 50%;
   transform: translateY(-50%);
-  color: whitesmoke;
+  color: white;
 }
 
 .hero-content h1 {
@@ -109,7 +113,7 @@ nav{
     font-size: 1.05rem;
     text-decoration: none;
     font-weight: 500;
-    color: whitesmoke;
+    color: white;
     transition: 0.2s ease;
 }
 
@@ -117,8 +121,8 @@ nav{
     color: rgb(182, 182, 182);
 }
 
-.contact a{
-    text-decoration: underline;
+.contact{
+    background-color:rgba(0, 0, 0, 0.4);
 }
 
 .section{

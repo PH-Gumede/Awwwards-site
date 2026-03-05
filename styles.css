@@ -120,3 +120,7 @@ nav{
 .contact a{
     text-decoration: underline;
 }
+
+.section{
+  padding: 2rem;
+}

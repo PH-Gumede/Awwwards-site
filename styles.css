@@ -25,7 +25,7 @@
   /* Nav */
   --nav-gap:            2rem;
   --nav-blur:           100px;
-  --nav-bg:             rgb(217, 228, 201);          /* e.g. rgba(255,255,255,0.1) */
+  --nav-bg:             rgb(233, 243, 219);          /* e.g. rgba(255,255,255,0.1) */
   --nav-border:         none;                 /* e.g. 1px solid rgba(255,255,255,0.3) */
 
   /* Buttons / Borders */

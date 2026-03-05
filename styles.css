@@ -122,8 +122,8 @@ nav{
 }
 
 .contact{
-  padding: 1rem;
-  color:rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  color: black;
   background-color: white;
   border-radius: 20px;
 }

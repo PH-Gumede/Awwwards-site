@@ -17,7 +17,7 @@
   --font-size-hero-p:   1.125rem;
 
   /* Spacing */
-  --spacing-nav-pad:    1rem;
+  --spacing-nav-pad:    0.5rem 1rem;
   --spacing-section:    0.5rem;
   --spacing-card-pad:   1rem;
   --spacing-hero-pad-x: 5vw;

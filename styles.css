@@ -253,11 +253,17 @@ nav {
 }
 
 .about3{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.pic{
   border-radius: var(--card-radius);
   height: 100%;
   overflow: hidden;
 }
-.about3 img{
+
+.pic img{
   object-fit: cover;
   object-position: center;
 }

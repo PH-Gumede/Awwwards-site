@@ -294,6 +294,21 @@ nav {
   object-position: center;
   display: block; /* removes the small gap below images */
 }
+
+.full-pic {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  min-height: 0; /* important — lets grid children shrink properly */
+  max-height: 85vh; /*keeps pic stack at good height*/
+}
+
+.full-pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block; /* removes the small gap below images */
+}
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

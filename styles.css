@@ -358,7 +358,11 @@ nav {
 .col{
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
+}
+
+.col h1{
+  margin-bottom: 2rem;
 }
 
 .listing{

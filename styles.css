@@ -265,6 +265,7 @@ nav {
   border-radius: var(--card-radius);
   overflow: hidden;
   min-height: 0; /* important — lets grid children shrink properly */
+  max-height: 30vh; /*keeps pic stack at good height*/
 }
 
 .pic img {

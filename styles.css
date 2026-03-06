@@ -325,7 +325,7 @@ nav {
 
 .main-chal{
   color: var(--color-white);
-    display: grid;
+  display: grid;
   grid-template-areas: 
     "left-top right-top right-top"  /* 3 columns */
     "left-bottom right-bottom none";     /* 3 columns */
@@ -397,10 +397,21 @@ nav {
 .pic-layer h3 {
   padding: 1rem;
   font-weight: 400;
-  color: aliceblue;
+  color: white;
   position: static;             /* remove absolute positioning */
   transition: 0.7s;
 }
+
+
+.listing-text{
+  display: grid;
+  grid-template-areas: 
+  "price location"
+  "features features";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
+}
+
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

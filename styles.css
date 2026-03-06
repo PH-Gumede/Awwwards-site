@@ -290,6 +290,7 @@ nav {
 }
 
 .pic {
+  position: relative;
   border-radius: var(--card-radius);
   overflow: hidden;
   min-height: 0; /* important — lets grid children shrink properly */
@@ -361,6 +362,33 @@ nav {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+.pic-layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  text-align: center;
+  transition: 0.5s ease;
+  /*Set children to flex items, place h3 at bottom*/
+  display: flex;
+  justify-content: center;
+}
+.pic-layer:hover{
+  background: rgba(0, 0, 0, 0.8);
+}
+.pic-layer h3{
+  padding: 1rem;
+  font-weight: 400;
+  color: aliceblue;
+  opacity: 0;
+  position: absolute;
+  transition: 0.7s;
+  bottom: 0;
 }
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar

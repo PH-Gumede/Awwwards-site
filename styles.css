@@ -430,6 +430,11 @@ nav {
 .features{
   grid-area: features;
 }
+
+.features p{
+  display: inline;
+  margin: 0 0.7rem 0 0.25rem;
+}
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

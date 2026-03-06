@@ -249,14 +249,12 @@ nav {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   gap: 4rem;
-  height: max(100vh);
 }
 
 .about3 {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1rem;
-  max-height: 80vh;  /* constrains the whole column so images aren't huge */
 }
 
 .pic {

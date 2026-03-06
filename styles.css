@@ -252,20 +252,25 @@ nav {
   height: max(100vh);
 }
 
-.about3{
+.about3 {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1rem;
-}
-.pic{
-  border-radius: var(--card-radius);
-  height: 100%;
-  overflow: hidden;
+  max-height: 80vh;  /* constrains the whole column so images aren't huge */
 }
 
-.pic img{
+.pic {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  min-height: 0; /* important — lets grid children shrink properly */
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block; /* removes the small gap below images */
 }
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar

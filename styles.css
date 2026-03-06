@@ -412,6 +412,19 @@ nav {
   grid-template-rows: 1fr 1fr; 
 }
 
+.location p{
+  display: inline;
+}
+
+.price{
+  grid-area: price;
+}
+.location{
+  grid-area: location;
+}
+.features{
+  grid-area: features;
+}
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

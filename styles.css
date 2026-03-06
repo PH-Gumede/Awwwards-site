@@ -211,10 +211,32 @@ nav {
   background-color: var(--color-text);
 }
 
-.contact:hover a {
+.contact:hover, .contact:hover a{
   color: var(--color-white);
 }
 
+.cta-button {
+  padding: 5px 10px;
+  border: 1px solid var(--color-text);
+  border-radius: var(--contact-radius);
+  transition: background var(--transition-fast);
+}
+
+.cta-button {
+  color: var(--color-white);
+  background-color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover{
+  transform: scale(1.8);
+}
+
+.cta2{
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
 
 /* ============================================================
    CONTENT SECTIONS

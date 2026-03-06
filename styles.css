@@ -408,7 +408,7 @@ nav {
   grid-template-areas: 
   "price location"
   "features features";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr; 
 }
 
@@ -421,6 +421,7 @@ nav {
 }
 .location{
   grid-area: location;
+  text-align: right;
 }
 .features{
   grid-area: features;

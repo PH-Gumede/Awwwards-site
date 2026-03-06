@@ -13,6 +13,7 @@
 
   /* Typography */
   --font-primary:       "Syne", helvetica, sans-serif;
+  --font-size-side:     0.8rem;
   --font-size-nav:      1.05rem;
   --font-size-hero-p:   1.125rem;
 
@@ -226,6 +227,10 @@ nav {
   transition: background var(--transition-fast), transform 0.3s ease;
 }
 
+.cta{
+  border: 1px solid var(--color-white);
+}
+
 .cta-button:hover {
   transform: scale(1.08); /* 1.8 is very large — try something subtle */
 }
@@ -270,6 +275,10 @@ nav {
   gap: 4rem;
 }
 
+.about1 p{
+  font-size: var(--font-size-side);
+}
+
 .about2 h1{
   font-size: 4rem;
 }
@@ -294,7 +303,6 @@ nav {
   object-position: center;
   display: block; /* removes the small gap below images */
 }
-
 .full-pic {
   border-radius: var(--card-radius);
   overflow: hidden;
@@ -308,6 +316,38 @@ nav {
   object-fit: cover;
   object-position: center;
   display: block; /* removes the small gap below images */
+}
+
+.main-chal{
+  color: var(--color-white);
+    display: grid;
+  grid-template-areas: 
+    "left-top right-top right-top"  /* 3 columns */
+    "left-bottom right-bottom none";     /* 3 columns */
+  gap: 4rem;
+  /* Must have 3 column values */
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.left-top{
+  grid-area: left-top;
+}
+
+.left-bottom{
+  grid-area: left-bottom;
+}
+
+
+.right-top{
+  grid-area: right-top;
+}
+.right-bottom{
+  grid-area: right-bottom;
+}
+
+.left-top p{
+  font-size: var(--font-size-side);
 }
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar

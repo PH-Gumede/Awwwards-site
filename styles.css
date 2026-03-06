@@ -251,6 +251,10 @@ nav {
   gap: 4rem;
 }
 
+.about2 h1{
+  font-size: 4rem;
+}
+
 .about3 {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;

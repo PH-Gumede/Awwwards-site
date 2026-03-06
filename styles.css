@@ -388,6 +388,7 @@ nav {
   align-items: center;
   opacity: 0;                    /* hidden by default */
   pointer-events: none;          /* don't block clicks when invisible */
+  padding-bottom: 1rem;
 }
 
 /* Show overlay when hovering the .pic container */

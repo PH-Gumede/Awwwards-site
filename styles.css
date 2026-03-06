@@ -349,6 +349,19 @@ nav {
 .left-top p{
   font-size: var(--font-size-side);
 }
+
+.col{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.listing{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

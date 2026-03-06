@@ -430,6 +430,7 @@ nav {
 }
 .features{
   grid-area: features;
+  margin-top: 0.2rem;
 }
 
 .features p{

@@ -556,6 +556,187 @@ t-right{
   grid-area: b-right;
 }
 
+/*================================ SUBSCRIBE ================================*/
+.card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      padding: 52px 48px 44px;
+      width: 480px;
+      max-width: 94vw;
+    }
+
+    .label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #e8e0d0;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+
+    .sublabel {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #666;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    /* Input + Button row */
+    .input-row {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .email-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #e8e0d0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      padding: 10px 16px 10px 0;
+      caret-color: #c9a96e;
+    }
+
+    .email-input::placeholder {
+      color: #444;
+      letter-spacing: 0.1em;
+    }
+
+    .subscribe-btn {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 10px 0 10px 20px;
+      cursor: not-allowed;
+      color: #3a3a3a;
+      transition: color 0.35s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .subscribe-btn.active {
+      color: #c9a96e;
+      cursor: pointer;
+    }
+
+    .subscribe-btn.active:hover {
+      color: #e8cfa0;
+    }
+
+    /* Single continuous underline spanning full row width */
+    .underline-bar {
+      height: 1px;
+      background: #2e2e2e;
+      position: relative;
+      overflow: hidden;
+      margin-top: 1px;
+    }
+
+    .underline-bar::after {
+      content: '';
+      position: absolute;
+      left: -100%;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: #c9a96e;
+      transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .underline-bar.filling::after {
+      left: 0;
+    }
+
+    /* Checkbox row */
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #3a3a3a;
+      background: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .checkbox-row input[type="checkbox"]:checked {
+      border-color: #c9a96e;
+      background: #c9a96e;
+    }
+
+    .checkbox-row input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 1px;
+      width: 5px;
+      height: 8px;
+      border: 1.5px solid #0e0e0e;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+
+    .checkbox-row label {
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      color: #555;
+      cursor: pointer;
+      user-select: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .checkbox-row label span {
+      color: #c9a96e;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .checkbox-row label span:hover {
+      border-color: #c9a96e;
+    }
+
+    .checkbox-row input[type="checkbox"]:checked + label {
+      color: #888;
+    }
+
+    /* Success state */
+    .success-msg {
+      display: none;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c9a96e;
+      margin-top: 22px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .success-msg.show {
+      display: block;
+      opacity: 1;
+    }
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

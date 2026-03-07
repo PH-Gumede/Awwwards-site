@@ -526,7 +526,7 @@ nav {
 }
 
 .top-border{
-  border-top: 1px solid var(--color-white);
+  border-top: 1px solid rgba(217, 228, 201, 0.3);
 }
 
 /*=============== NEEDS TO BE DONE ===============

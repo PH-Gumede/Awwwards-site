@@ -535,8 +535,9 @@ nav {
     "t-left t-right"  /* 3 columns */
     "b-left b-right";     /* 3 columns */
   /* Must have 3 column values */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;  
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr; 
+  gap: 2rem;
 }
 
 .t-left{

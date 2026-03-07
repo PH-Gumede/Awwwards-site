@@ -501,10 +501,12 @@ nav {
   grid-template-areas: 
     "lt head head head"  /* 3 columns */
     "- btm-l btm-r none";     /* 3 columns */
-  gap: 2rem;
   /* Must have 3 column values */
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 2rem;
+  padding: 5rem 0; 
+  max-height: 100vh;
 }
 
 .lt{

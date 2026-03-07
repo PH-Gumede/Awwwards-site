@@ -730,6 +730,23 @@ nav {
       display: block;
       opacity: 1;
     }
+/*================================ INFINITE SCROLL ================================*/
+
+
+/*================================ FOOTER ================================*/
+.footer{
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  color: var(--color-white);
+}
+.footer a{
+  display: block;
+}
+
+.footer p, .footer a{
+  margin-bottom: 1rem;
+}
+
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

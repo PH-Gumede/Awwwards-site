@@ -452,26 +452,77 @@ nav {
 }
 
 .super-grid{
+  margin-top: 2rem;
   display: grid;
   grid-template-areas: 
-  "top top top top"
-  "none btm1 btm2 btm3";
+  "top none none none"
+  "n btm1 btm2 btm3";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; 
-  gap: 2rem;
+  grid-template-rows: 1fr 2fr; 
+  gap: 3rem;
 }
+
+.btm1 h3, .btm1 h2, .btm2 h3, .btm2 h2, .btm3 h3, .btm3 h2, .top h1{
+  font-weight: 500;
+}
+
+.super-grid h3{
+  font-size: 12px;
+}
+
 .top{
   grid-area: top;
 }
+.top h1{
+  font-size: 45px;
+}
 .btm1{
   grid-area: btm1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .btm2{
   grid-area: btm2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .btm3{
   grid-area: btm3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+
+.focus{
+  color: var(--color-white);
+  display: grid;
+  grid-template-areas: 
+    "lt head head head"  /* 3 columns */
+    "- btm-l btm-r none";     /* 3 columns */
+  gap: 2rem;
+  /* Must have 3 column values */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.lt{
+  grid-area: lt;
+}
+
+.head{
+  grid-area: head;
+}
+
+.btm-l{
+  grid-area: btm-l;
+}
+
+.btm-r{
+  grid-area: btm-r;
+}
+
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

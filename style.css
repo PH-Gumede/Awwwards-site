@@ -170,7 +170,7 @@ nav {
 .logo {
   font-size: 2rem;
   font-weight: 900;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .logo p {
@@ -192,7 +192,7 @@ nav {
   font-size: var(--font-size-nav);
   text-decoration: none;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--color-text);
   transition: color var(--transition-fast);
 }
 
@@ -557,10 +557,6 @@ t-right{
 }
 
 /*================================ SUBSCRIBE ================================*/
-.card {
-      border: 1px solid #2a2a2a;
-    }
-
     /* .label {
       font-family: 'Cormorant Garamond', serif;
       font-size: 28px;
@@ -590,13 +586,13 @@ t-right{
       background: transparent;
       border: none;
       outline: none;
-      color: var(--text-color);
+      color: var(--color-text);
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 300;
       letter-spacing: 0.06em;
       padding: 10px 16px 10px 0;
-      caret-color: var(--text-color);
+      caret-color: var(--color-text);
     }
 
     .email-input::placeholder {
@@ -622,12 +618,12 @@ t-right{
     }
 
     .subscribe-btn.active {
-      color: #c9a96e;
+      color: var(--color-text);
       cursor: pointer;
     }
 
     .subscribe-btn.active:hover {
-      color: #e8cfa0;
+      color: rgb(0, 184, 73);
     }
 
     /* Single continuous underline spanning full row width */
@@ -646,7 +642,7 @@ t-right{
       top: 0;
       height: 100%;
       width: 100%;
-      background: #c9a96e;
+      background: rgb(0, 184, 73);
       transition: left 0.55s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -676,8 +672,8 @@ t-right{
     }
 
     .checkbox-row input[type="checkbox"]:checked {
-      border-color: #c9a96e;
-      background: #c9a96e;
+      border-color: rgb(0, 184, 73);
+      background: rgb(0, 184, 73);
     }
 
     .checkbox-row input[type="checkbox"]:checked::after {
@@ -704,13 +700,13 @@ t-right{
     }
 
     .checkbox-row label span {
-      color: #c9a96e;
+      color: var(--color-text);
       border-bottom: 1px solid transparent;
       transition: border-color 0.2s;
     }
 
     .checkbox-row label span:hover {
-      border-color: #c9a96e;
+      border-color: var(--color-text);
     }
 
     .checkbox-row input[type="checkbox"]:checked + label {
@@ -723,7 +719,7 @@ t-right{
       font-size: 11px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #c9a96e;
+      color: rgb(0, 184, 73);
       margin-top: 22px;
       opacity: 0;
       transition: opacity 0.4s ease;

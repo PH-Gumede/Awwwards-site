@@ -530,22 +530,22 @@ nav {
 }
 
 .stay{
-  padding: 2rem 0;
+  margin: 3rem 0 0 0;
   display: grid;
   grid-template-areas: 
     "t-left t-right"  /* 3 columns */
     "b-left b-right";     /* 3 columns */
   /* Must have 3 column values */
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 1fr; 
-  row-gap: 5rem;
+  grid-template-rows: auto auto; 
+  gap: 3rem;
 }
 
 .t-left{
   grid-area: t-left;
 }
 
-t-right{
+.t-right{
   grid-area: t-right;
 }
 

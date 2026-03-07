@@ -13,6 +13,7 @@
 
   /* Typography */
   --font-primary:       "Syne", helvetica, sans-serif;
+  --font-paragraph:     Helvetica, sans-serif;
   --font-size-side:     0.8rem;
   --font-size-nav:      1.05rem;
   --font-size-hero-p:   1.125rem;
@@ -121,6 +122,7 @@ body {
   font-size: var(--font-size-hero-p);
   max-width: 40ch;
   margin-bottom: 2rem;
+  font-family: var(--font-paragraph);
 }
 
 /* --- CTA button --- */
@@ -279,6 +281,10 @@ nav {
   gap: 4rem;
 }
 
+.about-us p{
+  font-family: var(--font-paragraph);
+}
+
 .about1 p{
   font-size: var(--font-size-side);
 }
@@ -350,6 +356,9 @@ nav {
 .right-bottom{
   grid-area: right-bottom;
 }
+.right-bottom p{
+  font-family: var(--font-paragraph);
+}
 
 .left-top p{
   font-size: var(--font-size-side);
@@ -401,6 +410,7 @@ nav {
 /* h3 always visible within the overlay (overlay itself controls show/hide) */
 .pic-layer h3 {
   padding: 1rem;
+  font-family: var(--font-paragraph);
   font-weight: 400;
   color: white;
   position: static;             /* remove absolute positioning */
@@ -416,7 +426,9 @@ nav {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr; 
 }
-
+.listing-text p{
+  font-family: var(--font-paragraph);
+}
 .location p{
   display: inline;
 }
@@ -460,6 +472,10 @@ nav {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 2fr; 
   gap: 3rem;
+}
+
+.super-grid p, .super-grid h3{
+  font-family: var(--font-paragraph);
 }
 
 .btm1 h3, .btm1 h2, .btm2 h3, .btm2 h2, .btm3 h3, .btm3 h2, .top h1{
@@ -509,8 +525,16 @@ nav {
   max-height: 100vh;
 }
 
+.focus p{
+  font-family: var(--font-paragraph);
+}
+
 .lt{
   grid-area: lt;
+}
+
+.focus.lt{
+  font-family: var(--font-primary);
 }
 
 .head{
@@ -753,11 +777,9 @@ nav {
 
 .footer p, .footer a{
   margin-bottom: 1rem;
+  font-family: var(--font-paragraph);
 }
 
-.footer p{
-  font-weight: 600;
-}
 
 .footer a::after{
     content: '';

@@ -529,6 +529,32 @@ nav {
   border-top: 1px solid rgba(217, 228, 201, 0.3);
 }
 
+.stay{
+  display: grid;
+  grid-template-areas: 
+    "t-left t-right"  /* 3 columns */
+    "b-left b-right";     /* 3 columns */
+  /* Must have 3 column values */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;  
+}
+
+.t-left{
+  grid-area: t-left;
+}
+
+t-right{
+  grid-area: t-right;
+}
+
+.b-left{
+  grid-area: b-left;
+}
+
+.b-right{
+  grid-area: b-right;
+}
+
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

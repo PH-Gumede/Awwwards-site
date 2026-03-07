@@ -525,6 +525,10 @@ nav {
   grid-area: btm-r;
 }
 
+.top-border{
+  border-top: 1px solid var(--color-white);
+}
+
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar
 Get 2nd font for long paragraphs

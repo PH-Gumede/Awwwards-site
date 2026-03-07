@@ -558,14 +558,10 @@ t-right{
 
 /*================================ SUBSCRIBE ================================*/
 .card {
-      background: #141414;
       border: 1px solid #2a2a2a;
-      padding: 52px 48px 44px;
-      width: 480px;
-      max-width: 94vw;
     }
 
-    .label {
+    /* .label {
       font-family: 'Cormorant Garamond', serif;
       font-size: 28px;
       font-weight: 300;
@@ -580,7 +576,7 @@ t-right{
       color: #666;
       text-transform: uppercase;
       margin-bottom: 32px;
-    }
+    } */
 
     /* Input + Button row */
     .input-row {
@@ -594,13 +590,13 @@ t-right{
       background: transparent;
       border: none;
       outline: none;
-      color: #e8e0d0;
+      color: var(--text-color);
       font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 300;
       letter-spacing: 0.06em;
       padding: 10px 16px 10px 0;
-      caret-color: #c9a96e;
+      caret-color: var(--text-color);
     }
 
     .email-input::placeholder {

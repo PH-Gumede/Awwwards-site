@@ -736,16 +736,40 @@ nav {
 /*================================ FOOTER ================================*/
 .footer{
   display: grid;
-  grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(5, 1fr);
   color: var(--color-white);
 }
 .footer a{
-  display: block;
+  display: inline-block;
+}
+
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer p, .footer a{
   margin-bottom: 1rem;
 }
+
+.footer p{
+  font-weight: 600;
+}
+
+.footer a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color-white);
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+  }
+  .footer a:hover::after{
+    width: 100%;
+  }
 
 /*=============== NEEDS TO BE DONE ===============
 Copy letusibiza word for word, bar for bar

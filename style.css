@@ -738,6 +738,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   color: var(--color-white);
+  gap: 1rem;
 }
 .footer a{
   display: inline-block;
@@ -769,6 +770,10 @@ nav {
   }
   .footer a:hover::after{
     width: 100%;
+  }
+
+  .top-gap{
+    margin-top: 8rem;
   }
 
 /*=============== NEEDS TO BE DONE ===============

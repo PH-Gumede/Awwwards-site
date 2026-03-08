@@ -570,6 +570,10 @@ nav {
 .t-left{
   grid-area: t-left;
 }
+.t-left p{
+  font-size: var(--font-size-side);
+  font-family: var(--font-primary);
+}
 
 .t-right{
   grid-area: t-right;

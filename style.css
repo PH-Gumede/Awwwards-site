@@ -755,6 +755,25 @@ nav {
       opacity: 1;
     }
 /*================================ INFINITE SCROLL ================================*/
+.carousel{
+  display: flex;
+}
+
+.group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card{
+  flex: 0 0 5rem;
+  height: 5rem;
+  padding: 1rem;
+  background-color: var(--color-white);
+  border-radius: 0.2rem;
+  align-content: center;
+}
 
 
 /*================================ FOOTER ================================*/

@@ -756,37 +756,29 @@ nav {
     }
 /*================================ INFINITE CAROUSEL ================================*/
 .carousel {
-  border: 5px solid var(--color-white);
-  width: 95%;
-  margin: auto;
-  overflow: hidden; /* hidden, not auto — no scrollbar needed */
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
 }
 
 .carousel-track {
   display: flex;
-  animation: spin 5s infinite linear;
-  width: max-content; /* shrinkwrap both groups */
+  gap: 1.25rem;
+  will-change: transform;
 }
 
-.group {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.card {
+.carousel-card {
   flex: 0 0 10rem;
   height: 10rem;
-  padding: 1rem;
   background-color: var(--color-white);
-  border-radius: 0.2rem;
-  align-content: center;
-  text-align: center;
-}
-
-@keyframes spin {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* -50% of the track = exactly one group */
+  border-radius: var(--card-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: var(--font-primary);
 }
 
 
@@ -830,9 +822,3 @@ nav {
   .top-gap{
     margin-top: 8rem;
   }
-
-/*=============== NEEDS TO BE DONE ===============
-Copy letusibiza word for word, bar for bar
-Get 2nd font for long paragraphs
-Get logo
-*/

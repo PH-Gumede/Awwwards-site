@@ -171,7 +171,7 @@ nav {
 /* --- logo --- */
 .logo {
   overflow: hidden;
-  max-width: 20px;
+  max-width: 50px;
 }
 .logo img{
   width: 100%;

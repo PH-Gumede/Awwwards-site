@@ -754,25 +754,39 @@ nav {
       display: block;
       opacity: 1;
     }
-/*================================ INFINITE SCROLL ================================*/
-.carousel{
-  display: flex;
+/*================================ INFINITE CAROUSEL ================================*/
+.carousel {
+  border: 5px solid var(--color-white);
+  width: 95%;
+  margin: auto;
+  overflow: hidden; /* hidden, not auto — no scrollbar needed */
 }
 
-.group{
+.carousel-track {
   display: flex;
-  justify-content: center;
+  animation: spin 5s infinite linear;
+  width: max-content; /* shrinkwrap both groups */
+}
+
+.group {
+  display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.card{
-  flex: 0 0 5rem;
-  height: 5rem;
+.card {
+  flex: 0 0 10rem;
+  height: 10rem;
   padding: 1rem;
   background-color: var(--color-white);
   border-radius: 0.2rem;
   align-content: center;
+  text-align: center;
+}
+
+@keyframes spin {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% of the track = exactly one group */
 }
 
 

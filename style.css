@@ -805,6 +805,10 @@ nav {
   font-family: var(--font-paragraph);
 }
 
+.footer h4{
+ margin-bottom: 1rem; 
+}
+
 
 .footer a::after{
     content: '';

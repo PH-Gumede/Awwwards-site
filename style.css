@@ -287,6 +287,7 @@ nav {
 
 .about1 p{
   font-size: var(--font-size-side);
+  font-family: var(--font-primary);
 }
 
 .about2 h1{
@@ -533,8 +534,9 @@ nav {
   grid-area: lt;
 }
 
-.focus.lt{
+.lt p{
   font-family: var(--font-primary);
+  font-size: var(--font-size-side);
 }
 
 .head{

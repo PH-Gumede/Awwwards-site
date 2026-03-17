@@ -1,4 +1,4 @@
-const emailInput   = document.getElementById('emailInput');
+    const emailInput   = document.getElementById('emailInput');
     const subscribeBtn = document.getElementById('subscribeBtn');
     const privacyCheck = document.getElementById('privacyCheck');
     const underlineBar = document.getElementById('underlineBar');

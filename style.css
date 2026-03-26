@@ -838,3 +838,124 @@ nav {
   .top-gap{
     margin-top: 8rem;
   }
+
+  /* ============================================================
+   MOBILE RESPONSIVE — max-width: 768px
+   Every multi-column grid/flex layout collapses to flex column
+   ============================================================ */
+@media (max-width: 768px) {
+ 
+  /* --- Nav --- */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+ 
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+ 
+  .contact {
+    align-self: flex-start;
+  }
+ 
+  /* --- Hero content --- */
+  .hero-content {
+    padding: 0 1.25rem;
+    max-width: 100%;
+  }
+ 
+  .hero-content h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+ 
+  /* --- Intro --- */
+  .intro p {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+ 
+  /* --- About Us --- */
+  .about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  .about2 h1 {
+    font-size: 2.25rem;
+  }
+ 
+  .about3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+ 
+  .about3 .pic {
+    max-height: 40vw;
+  }
+ 
+  /* --- Main Challenge --- */
+  .main-chal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  /* --- Listing --- */
+  .listing {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+ 
+  /* --- Stay / Subscribe --- */
+  .stay {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1.5rem 0 0 0;
+  }
+ 
+  /* --- Quote --- */
+  .quote p {
+    font-size: clamp(1.75rem, 8vw, 3rem);
+  }
+ 
+  /* --- Super Grid --- */
+  .super-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  /* --- Focus --- */
+  .focus {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: none;
+    padding: 2rem 0;
+  }
+ 
+  /* --- Footer --- */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  .top-gap {
+    margin-top: 2rem;
+  }
+ 
+  /* --- Buttons --- */
+  .cta-button {
+    display: inline-block;
+    margin-top: 0.75rem;
+  }
+}

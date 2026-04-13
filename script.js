@@ -75,3 +75,25 @@
 
       requestAnimationFrame(tick);
     })();
+
+// ---- Mobile nav overlay ----
+const burgerBtn = document.getElementById('burgerBtn');
+const navOverlay = document.getElementById('navOverlay');
+const overlayClose = document.getElementById('overlayClose');
+
+burgerBtn.addEventListener('click', () => {
+  navOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+});
+
+overlayClose.addEventListener('click', closeOverlay);
+
+// Close when tapping any overlay link
+navOverlay.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeOverlay);
+});
+
+function closeOverlay() {
+  navOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}

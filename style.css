@@ -844,6 +844,10 @@ nav {
    Every multi-column grid/flex layout collapses to flex column
    ============================================================ */
 @media (max-width: 768px) {
+ /* --- Contact Button --- */
+  .contact{
+    display: none;
+  }
  
   /* --- Nav --- */
   nav {

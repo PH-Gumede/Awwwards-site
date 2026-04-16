@@ -146,10 +146,6 @@ body {
 /* ============================================================
    NAVIGATION
    ============================================================ */
-.burger{
-  height: 100%;
-  color: var(--color-body-bg);
-}
 
 .site-header {
   position: fixed;
@@ -844,11 +840,111 @@ nav {
     margin-top: 8rem;
   }
 
-  /* ============================================================
+/* ============================================================
+   BURGER BUTTON
+   ============================================================ */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+.burger i{
+  font-size: 1.4rem;
+  color: var(--color-body-bg);
+}
+
+/* ============================================================
+   NAV OVERLAY
+   ============================================================ */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-nav);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.overlay-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1;
+}
+
+.overlay-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 0;
+}
+
+.overlay-links li a {
+  font-family: var(--font-primary);
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.overlay-links li a:hover {
+  color: var(--color-grey);
+}
+
+.overlay-contact a {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  border-radius: var(--contact-radius);
+  padding: 8px 22px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.overlay-contact a:hover {
+  background: var(--color-text);
+  color: var(--color-white);
+}  
+
+
+
+/* ============================================================
    MOBILE RESPONSIVE — max-width: 768px
    Every multi-column grid/flex layout collapses to flex column
    ============================================================ */
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
  /* --- Contact Button --- */
   .contact{
     display: none;
@@ -856,8 +952,9 @@ nav {
  
   /* --- Nav --- */
   nav {
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
+    padding: 0.1rem 0.3rem 0.1rem 0rem;
   }
  
   .nav-links {
@@ -967,112 +1064,7 @@ nav {
 
 /*--------------------Mobile Nav------------------------------*/
 
-/* ============================================================
-   BURGER BUTTON
-   ============================================================ */
-.burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  z-index: 1001;
-}
 
-.burger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background-color: var(--color-text);
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
 
-/* ============================================================
-   NAV OVERLAY
-   ============================================================ */
-.nav-overlay {
-  position: fixed;
-  inset: 0;
-  background-color: var(--color-nav);
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-8px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
 
-.nav-overlay.open {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0);
-}
-
-.overlay-close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--color-text);
-  font-family: var(--font-primary);
-  line-height: 1;
-}
-
-.overlay-links {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.75rem;
-  padding: 0;
-}
-
-.overlay-links li a {
-  font-family: var(--font-primary);
-  font-size: clamp(1.75rem, 8vw, 2.5rem);
-  font-weight: 600;
-  color: var(--color-text);
-  text-decoration: none;
-  letter-spacing: -0.01em;
-  transition: color 0.2s ease;
-}
-
-.overlay-links li a:hover {
-  color: var(--color-grey);
-}
-
-.overlay-contact a {
-  font-family: var(--font-primary);
-  font-size: 1rem;
-  color: var(--color-text);
-  border: 1px solid var(--color-text);
-  border-radius: var(--contact-radius);
-  padding: 8px 22px;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.overlay-contact a:hover {
-  background: var(--color-text);
-  color: var(--color-white);
-}
-
-/* ============================================================
-   SHOW BURGER ON MOBILE
-   ============================================================ */
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
-  }
-}
 

@@ -205,8 +205,17 @@ nav {
   transition: color var(--transition-fast);
 }
 
-.nav-links li a:hover {
-  color: var(--color-grey);
+.nav-links li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color-body-bg);
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+  }
+.nav-links li a:hover::after{
+  width: 100%;
 }
 
 /* --- contact pill --- */
@@ -910,14 +919,23 @@ nav {
   font-family: var(--font-primary);
   font-size: clamp(1.75rem, 8vw, 2.5rem);
   font-weight: 600;
-  color: var(--color-text);
+  color: var(--color-body-bg);
   text-decoration: none;
   letter-spacing: -0.01em;
   transition: color 0.2s ease;
 }
 
-.overlay-links li a:hover {
-  color: var(--color-grey);
+.overlay-links li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color-body-bg);
+    display: block;
+    margin: auto;
+    transition: 0.4s ease;
+  }
+.overlay-links li a:hover::after{
+  width: 100%;
 }
 
 .overlay-contact a {

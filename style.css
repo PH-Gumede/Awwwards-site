@@ -1060,6 +1060,11 @@ nav {
     display: inline-block;
     margin-top: 0.75rem;
   }
+
+  .footer-logo {
+    max-height: none;
+    width: 80px;
+  }
 }
 
 /*--------------------Mobile Nav------------------------------*/
